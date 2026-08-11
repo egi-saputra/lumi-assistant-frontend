@@ -1,6 +1,6 @@
 <script setup>
 import { Head } from '@inertiajs/vue3'
-import Navbar from '@/Components/HomePage/Navbar.vue'
+import HomeLayout from '@/Layouts/HomeLayout.vue'
 import HeroSection from '@/Components/HomePage/HeroSection.vue'
 import HowItWorksSection from '@/Components/HomePage/HowItWorksSection.vue'
 import FeaturesSection from '@/Components/HomePage/FeaturesSection.vue'
@@ -10,11 +10,15 @@ import CtaSection from '@/Components/HomePage/CtaSection.vue'
 import FaqSection from '@/Components/HomePage/FaqSection.vue'
 import SiteFooter from '@/Components/HomePage/SiteFooter.vue'
 
+defineOptions({
+    layout: HomeLayout,
+})
+
 // Ganti dengan nomor WhatsApp bot kamu (format internasional, tanpa "+" atau "0" di depan)
 const WA_NUMBER = '6285185590158'
 const waLink = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('Halo Lumi!')}`
 
-const title = 'Lumi Assistant — Catat Uang Secepat Chat di WhatsApp'
+const title = 'Lumi Assistant'
 const description =
     'Lumi Assistant adalah asisten pencatat keuangan pribadi lewat WhatsApp. Chat atau foto struk, Lumi catat nominal, kategori, dan metode pembayaran otomatis — lengkap dengan rekap dan ekspor Excel/PDF.'
 const canonical = 'https://assistant.lumiverse.co.id'
@@ -55,8 +59,7 @@ const structuredData = {
         <component is="script" type="application/ld+json" v-html="JSON.stringify(structuredData)"></component>
     </Head>
 
-    <div class="min-h-screen bg-paper font-sans text-ink antialiased transition-colors dark:bg-ink dark:text-paper">
-        <Navbar :wa-link="waLink" />
+    <div class="pt-[76px]">
         <HeroSection :wa-link="waLink" />
         <HowItWorksSection />
         <FeaturesSection />

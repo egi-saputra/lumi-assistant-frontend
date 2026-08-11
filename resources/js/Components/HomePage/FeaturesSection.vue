@@ -12,7 +12,7 @@ const fitur = [
 <template>
     <section class="bg-white/70 border-y border-ink/10 dark:border-paper/10 transition-colors dark:bg-paper/[0.02]">
         <div class="mx-auto max-w-6xl px-6 sm:py-24 py-10">
-            <div class="mb-14">
+            <div class="mb-14 reveal">
                 <p class="mb-3 font-mono text-xs text-center uppercase tracking-[0.2em] text-jade">Fitur</p>
                 <h2
                     class="font-display text-3xl text-center font-medium tracking-tight text-ink dark:text-paper md:text-4xl">
@@ -21,7 +21,7 @@ const fitur = [
             </div>
 
             <div
-                class="grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 dark:border-paper/10 dark:bg-paper/10 sm:grid-cols-2 lg:grid-cols-3">
+                class="reveal grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 dark:border-paper/10 dark:bg-paper/10 sm:grid-cols-2 lg:grid-cols-3">
                 <div v-for="f in fitur" :key="f.judul" class="bg-paper p-6 dark:bg-ink">
                     <h3 class="font-display text-base font-semibold text-ink dark:text-paper">{{ f.judul }}</h3>
                     <p class="mt-2 text-sm leading-relaxed text-slate">{{ f.teks }}</p>

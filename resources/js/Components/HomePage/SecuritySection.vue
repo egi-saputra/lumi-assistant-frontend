@@ -1,7 +1,7 @@
 <template>
     <section class="mx-auto max-w-6xl px-6 py-24">
         <div
-            class="grid gap-10 rounded-2xl border-2 border-ink bg-white/90 px-6 py-10 text-ink dark:text-paper shadow-[6px_6px_0_0_theme(colors.ink)] sm:grid-cols-[1fr,1.2fr] sm:px-12 sm:py-24 dark:border-jade-light dark:bg-black/30 dark:shadow-[6px_6px_0_0_theme(colors.jade)]">
+            class="reveal grid gap-10 rounded-2xl border-2 border-ink bg-white/90 px-6 py-10 text-ink dark:text-paper shadow-[6px_6px_0_0_theme(colors.ink)] sm:grid-cols-[1fr,1.2fr] sm:px-12 sm:py-24 dark:border-jade-light dark:bg-black/30 dark:shadow-[6px_6px_0_0_theme(colors.jade)]">
             <div>
                 <p class="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-jade">
                     Keamanan</p>

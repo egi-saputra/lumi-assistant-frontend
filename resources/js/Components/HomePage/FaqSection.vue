@@ -56,7 +56,7 @@ function toggle(i) {
 
         <div class="grid gap-12 px-6 md:px-20 md:grid-cols-[0.85fr_1.15fr] md:gap-16">
             <!-- Left: intro + contact -->
-            <div>
+            <div class="reveal">
                 <p class="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-jade">Pertanyaan umum
                 </p>
                 <h2
@@ -69,13 +69,15 @@ function toggle(i) {
                 </p>
 
                 <div
-                    class="mt-9 rounded-2xl border border-ink/10 bg-ink/[0.03] p-6 dark:border-paper/10 dark:bg-paper/[0.04]">
+                    class="hidden sm:block mt-9 rounded-2xl border border-ink/10 bg-ink/[0.03] p-6 dark:border-paper/10 dark:bg-paper/[0.04]">
                     <p class="font-display text-lg font-medium text-ink dark:text-paper">
-                        Selalu ada untuk membantu kamu
+                        Selalu ada untuk membantu Anda
                     </p>
                     <p class="mt-2 text-sm leading-relaxed text-slate">
-                        Kalau kamu mau tahu lebih lanjut soal fitur, harga, atau kendala yang dialami, tim kami siap
-                        bantu langsung lewat WhatsApp.
+                        Apabila Anda ingin mengetahui lebih lanjut mengenai fitur produk,
+                        harga layanan, atau solusi atas kendala yang dialami, kami selalu siap membantu Anda.
+                        Hubungi kami melaui email atau media sosial. Anda juga dapat
+                        mengunjungi Pusat Bantuan kami.
                     </p>
                     <PrimaryButton :href="waLink" tag="a" class="mt-5 !px-5 !py-2.5 text-sm">
                         Hubungi kami
@@ -88,7 +90,7 @@ function toggle(i) {
             </div>
 
             <!-- Right: accordion -->
-            <div class="flex flex-col gap-3">
+            <div class="flex flex-col gap-3 reveal">
                 <div v-for="(item, i) in faqs" :key="item.q"
                     class="overflow-hidden rounded-2xl border transition-colors" :class="openIndex === i
                         ? 'border-jade/40'
@@ -121,6 +123,26 @@ function toggle(i) {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div
+                class="reveal sm:hidden block rounded-2xl border border-ink/10 bg-ink/[0.03] p-6 dark:border-paper/10 dark:bg-paper/[0.04]">
+                <p class="font-display text-lg font-medium text-ink dark:text-paper">
+                    Kami selalu ada,<br>untuk membantu Anda
+                </p>
+                <p class="mt-2 text-sm leading-relaxed text-slate">
+                    Apabila Anda ingin mengetahui lebih lanjut mengenai fitur produk,
+                    harga layanan, atau solusi atas kendala yang dialami, kami selalu siap membantu Anda.
+                    Hubungi kami melaui email atau media sosial. Anda juga dapat
+                    mengunjungi Pusat Bantuan kami.
+                </p>
+                <PrimaryButton :href="waLink" tag="a" class="mt-5 !px-5 !py-2.5 text-sm">
+                    Hubungi kami
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="ml-1.5 h-4 w-4">
+                        <path d="M4 12h16M14 6l6 6-6 6" />
+                    </svg>
+                </PrimaryButton>
             </div>
         </div>
 

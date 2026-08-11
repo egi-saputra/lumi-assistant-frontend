@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    html,
+    body {
+        @apply bg-paper text-ink dark:bg-ink dark:text-paper transition-colors duration-300;
+    }
+}
+
+/* ─── SCROLL REVEAL ──────────────────────────────────── */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* ─── LOCK WINDOW SCROLL (biar address bar browser tidak collapse) ─── */
+html.lock-scroll,
+body.lock-scroll {
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+}
+
+#app {
+    height: 100%;
+}
+
+.scroll-viewport {
+    height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain; /* cegah pull-to-refresh ikut narik address bar */
+    scroll-behavior: smooth;
+}
+
+/* ─── Sembunyikan scrollbar visual ─── */
+.no-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE / Edge lama */
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge (Chromium) */
+}

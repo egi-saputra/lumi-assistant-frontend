@@ -3,33 +3,33 @@ import { ref, computed } from 'vue'
 
 const testimoni = [
     {
-        nama: 'Dwi Anggraini',
+        nama: 'Abdul Jabar',
         peran: 'Pemilik warung kopi',
-        avatar: 'D',
+        avatar: 'AJ',
         teks: 'Dulu nyatet pengeluaran suka lupa, sekarang tinggal chat Lumi tiap abis belanja bahan baku. Rekap bulanan langsung rapi, gampang banget dibawa buat itung untung rugi.',
     },
     {
-        nama: 'Rafi Pratama',
+        nama: 'Muhammad Abi',
         peran: 'Freelancer desain',
-        avatar: 'R',
+        avatar: 'MA',
         teks: 'Paling suka bagian foto struk, jadi nggak perlu ngetik manual satu-satu. Lumi bacanya cepet dan kategorinya udah pas dari awal.',
     },
     {
-        nama: 'Salsabila Putri',
+        nama: 'Hidayatul Fahmi',
         peran: 'Karyawan swasta',
-        avatar: 'S',
+        avatar: 'HF',
         teks: 'Awalnya iseng coba karena penasaran, eh ternyata beneran kepake tiap hari. Sekarang jadi tau kemana aja uang jajan bulanan perginya.',
     },
     {
-        nama: 'Bagus Wicaksono',
+        nama: 'Cantika Apriliani',
         peran: 'Mahasiswa',
-        avatar: 'B',
+        avatar: 'CA',
         teks: 'Simpel banget, nggak ribet buka aplikasi baru. Tinggal chat kayak biasa, catatan keuangan langsung update.',
     },
     {
-        nama: 'Intan Maharani',
+        nama: 'Apriyanti',
         peran: 'Ibu rumah tangga',
-        avatar: 'I',
+        avatar: 'AP',
         teks: 'Buat ngatur uang belanja bulanan jadi lebih terkontrol. Tinggal minta rekap mingguan, langsung kelihatan pos mana yang paling boros.',
     },
 ]
@@ -55,7 +55,7 @@ const current = computed(() => testimoni[active.value])
     <section id="testimoni" class="mx-auto bg-paper dark:bg-ink/80 dark:text-paper">
 
         <div class="px-6 md:px-20 sm:py-24 py-16">
-            <div class="text-center mb-14">
+            <div class="text-center mb-14 reveal">
                 <p class="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-jade">apa kata mereka</p>
                 <h2 class="font-display text-3xl font-medium tracking-tight text-ink dark:text-paper md:text-4xl">
                     Dipakai dan dipercaya.
@@ -65,7 +65,7 @@ const current = computed(() => testimoni[active.value])
                 </p>
             </div>
 
-            <div class="mx-auto max-w-6xl">
+            <div class="mx-auto max-w-6xl reveal">
                 <div
                     class="relative overflow-hidden rounded-2xl border-2 border-ink bg-white/80 p-8 text-ink shadow-[6px_6px_0_0_theme(colors.ink)] dark:border-jade-light dark:bg-black/30 dark:text-paper dark:shadow-[6px_6px_0_0_theme(colors.jade)] md:p-10">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
