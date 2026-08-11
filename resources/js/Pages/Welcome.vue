@@ -66,7 +66,7 @@ const structuredData = {
         <SecuritySection />
         <CtaSection :wa-link="waLink" />
         <ReviewSection />
-        <FaqSection />
+        <FaqSection :wa-link="waLink" />
         <SiteFooter />
     </div>
 </template>
