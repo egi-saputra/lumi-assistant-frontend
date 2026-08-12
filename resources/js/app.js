@@ -5,7 +5,7 @@ import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import { createApp, h } from "vue";
 import { ZiggyVue } from "../../vendor/tightenco/ziggy";
 
-const appName = import.meta.env.VITE_APP_NAME || "Lumiverse School";
+const appName = import.meta.env.VITE_APP_NAME || "Lumi Assistant";
 
 // Deteksi mobile — aman untuk SSR karena ada guard typeof window
 const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
